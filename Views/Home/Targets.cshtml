@@ -1,0 +1,57 @@
+﻿@model IEnumerable<MossadMVC.Models.Target>
+
+@{
+    ViewData["Title"] = "Targets";
+}
+
+<h1>Targets</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhotoUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.locationID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.locationID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.status)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

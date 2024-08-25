@@ -1,0 +1,62 @@
+﻿@model MossadMVC.Models.MossadView
+
+@{
+    ViewData["Title"] = "Mossad";
+}
+
+<h1>Mossad</h1>
+
+<div>
+    <h4>MossadView</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalAgents)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalAgents)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalAgentsActivate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalAgentsActivate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalTargets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalTargets)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalTargetsDead)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalTargetsDead)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalMissions)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalMissions)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TotalMissionsActivate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TotalMissionsActivate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AgentsToTargets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AgentsToTargets)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SuggestionsAgentsToTargets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SuggestionsAgentsToTargets)
+        </dd>
+    </dl>
+</div>
