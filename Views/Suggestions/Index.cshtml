@@ -1,0 +1,75 @@
+﻿@model IEnumerable<MossadMVC.Models.SuggestionView>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <meta http-equiv="refresh" content="5">
+</head>
+<h1>Suggestion</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MissionID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentNickname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AgentLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetPosition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TargetLocation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Distance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeLeft)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MissionID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgentNickname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AgentLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TargetName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TargetPosition)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TargetLocation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Distance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeLeft)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.MissionID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
