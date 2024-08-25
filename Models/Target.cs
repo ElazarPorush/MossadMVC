@@ -5,6 +5,7 @@ namespace MossadMVC.Models
 {
     public class Target
     {
+
         [Key]
         public int ID { get; set; }
         public string Name { get; set; }
