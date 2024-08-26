@@ -24,6 +24,7 @@ namespace MossadMVC.Controllers
         public async Task<IActionResult> Details(int id)
         {
             var result = await _httpClient.GetStringAsync($"http://localhost:5059/View/suggestionsMissions/{id}");
+            if (result == null) { return RedirectToAction("Index"); }
             SuggestionView? suggestions = JsonConvert.DeserializeObject<SuggestionView>(result);
             return View(suggestions);
         }

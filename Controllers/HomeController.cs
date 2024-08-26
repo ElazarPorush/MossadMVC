@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MossadAPI.Models;
 using MossadMVC.Models;
 using Newtonsoft.Json;
 using System.Diagnostics;
@@ -23,9 +24,16 @@ namespace MossadMVC.Controllers
 
         public async Task<IActionResult> Targets()
         {
-            var result = await _httpClient.GetStringAsync($"http://localhost:5059/Targets");
-            List<Target>? targets = JsonConvert.DeserializeObject<List<Target>>(result);
+            var result = await _httpClient.GetStringAsync($"http://localhost:5059/View/Targets");
+            List<TargetView>? targets = JsonConvert.DeserializeObject<List<TargetView>>(result);
             return View(targets);
+        }
+
+        public async Task<IActionResult> Agents()
+        {
+            var result = await _httpClient.GetStringAsync($"http://localhost:5059/View/Agents");
+            List<AgentView>? agents = JsonConvert.DeserializeObject<List<AgentView>>(result);
+            return View(agents);
         }
 
         public IActionResult Privacy()

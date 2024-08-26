@@ -1,4 +1,4 @@
-﻿@model IEnumerable<MossadMVC.Models.Target>
+﻿@model IEnumerable<MossadMVC.Models.TargetView>
 
 @{
     ViewData["Title"] = "Targets";
@@ -10,7 +10,7 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ID)
+                @Html.DisplayNameFor(model => model.Id)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
@@ -22,10 +22,10 @@
                 @Html.DisplayNameFor(model => model.PhotoUrl)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.locationID)
+                @Html.DisplayNameFor(model => model.Location)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.status)
+                @Html.DisplayNameFor(model => model.StatusTarget)
             </th>
             <th></th>
         </tr>
@@ -34,7 +34,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.ID)
+                @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -46,10 +46,10 @@
                 @Html.DisplayFor(modelItem => item.PhotoUrl)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.locationID)
+                @Html.DisplayFor(modelItem => item.Location)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.status)
+                @Html.DisplayFor(modelItem => item.StatusTarget)
             </td>
         </tr>
 }
