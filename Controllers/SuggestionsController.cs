@@ -31,7 +31,7 @@ namespace MossadMVC.Controllers
 
         public async Task<IActionResult> PutStatus(int id)
         {
-            _httpClient.PutAsJsonAsync($"http://localhost:5059/Missions/{id}", "{ “status”: “Assigned” }");
+            await _httpClient.PutAsJsonAsync($"http://localhost:5059/Missions/{id}", "{ “status”: “Assigned” }");
             return RedirectToAction("Index");
         }
     }
